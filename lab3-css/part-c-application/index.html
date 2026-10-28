@@ -1,0 +1,234 @@
+Part C – coming soon
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNova - Summer Internships</title>
+	<link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>TechNova</h1>
+        <p>Build your future with us.</p>
+
+        <nav>
+            <a href="#internships">Internships</a> |
+            <a href="#application">Apply</a> |
+            <a href="#faq">FAQ</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="internships">
+            <h2>Summer Internships</h2>
+
+            <p>
+                Join TechNova and gain practical experience working
+                with our technology teams.
+            </p>
+
+            <!-- Responsive banner -->
+            <picture>
+                <source
+                    media="(min-width: 800px)"
+                    srcset="media/banner-1280.jpg">
+
+                <img
+                    src="media/banner-640.jpg"
+                    alt="TechNova summer internship banner"
+                    loading="lazy">
+            </picture>
+        </section>
+
+        <section>
+            <h2>Meet TechNova</h2>
+
+            <video controls poster="media/poster.jpg">
+                <source
+                    src="media/presentation.webm"
+                    type="video/webm">
+
+                <source
+                    src="media/presentation.mp4"
+                    type="video/mp4">
+
+                <track
+                    src="media/captions-en.vtt"
+                    kind="captions"
+                    srclang="en"
+                    label="English"
+                    default>
+
+                Your browser cannot play this video.
+                <a href="media/presentation.mp4">Download the video</a>.
+            </video>
+
+            <p>
+                <a href="media/presentation.mp4" download>
+                    Download the presentation video
+                </a>
+            </p>
+        </section>
+
+        <section>
+            <h2>Availability</h2>
+
+            <p>
+                <label for="places">Places taken: 18 of 30</label>
+                <meter id="places" min="0" max="30" value="18">
+                    18 of 30
+                </meter>
+            </p>
+
+            <p>
+                <label for="campaign">Campaign: 40% elapsed</label>
+                <progress id="campaign" max="100" value="40">
+                    40%
+                </progress>
+            </p>
+        </section>
+
+        <section id="application">
+            <h2>Quick Application</h2>
+
+            <form
+                action="https://httpbin.org/post"
+                method="post"
+                enctype="multipart/form-data">
+
+                <p>
+                    <label for="city">City:</label>
+                    <input
+                        type="text"
+                        id="city"
+                        name="city"
+                        list="cities"
+                        required>
+
+                    <datalist id="cities">
+                        <option value="Algiers">
+                        <option value="Oran">
+                        <option value="Constantine">
+                        <option value="Annaba">
+                    </datalist>
+                </p>
+
+                <p>
+                    <label for="speciality">Speciality:</label>
+
+                    <select id="speciality" name="speciality" required>
+                        <option value="" selected disabled>
+                            Choose a speciality
+                        </option>
+						<optgroup label="Engineering">
+                            <option value="Software Development">
+                                Software Development
+                            </option>
+                            <option value="Artificial Intelligence">
+                                Artificial Intelligence
+                            </option>
+                            <option value="Cybersecurity">
+                                Cybersecurity
+                            </option>
+                        </optgroup>
+
+                        <optgroup label="Design">
+                            <option value="UI UX Design">
+                                UI/UX Design
+                            </option>
+                            <option value="Graphic Design">
+                                Graphic Design
+                            </option>
+                        </optgroup>
+
+                        <optgroup label="Business">
+                            <option value="Marketing">Marketing</option>
+                            <option value="Data Analysis">
+                                Data Analysis
+                            </option>
+                        </optgroup>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="cv">Upload your CV (PDF only):</label>
+                    <input
+                        type="file"
+                        id="cv"
+                        name="cv"
+                        accept=".pdf,application/pdf"
+                        required>
+                </p>
+
+                <p>
+                    <label for="motivation">Motivation:</label>
+                    <textarea
+                        id="motivation"
+                        name="motivation"
+                        rows="5"
+                        cols="40"
+                        required></textarea>
+
+                    <button
+                        type="button"
+                        popovertarget="motivation-help"
+                        aria-label="Help with the motivation field">
+                        ?
+                    </button>
+
+                    <span id="motivation-help" popover>
+                        Explain why you want to join TechNova,
+                        what skills you have, and what you hope to learn.
+                    </span>
+                </p>
+
+                <input type="hidden" name="source" value="lab2">
+
+                <button type="submit">Apply</button>
+
+                <button
+                    type="submit"
+                    formaction="https://httpbin.org/anything"
+                    formnovalidate>
+                    Save draft
+                </button>
+            </form>
+        </section>
+
+        <section id="faq">
+            <h2>Frequently Asked Questions</h2>
+
+            <details name="faq" open>
+                <summary>Who can apply?</summary>
+                <p>
+                    Students interested in technology and learning
+                    new skills can apply.
+                </p>
+            </details>
+
+            <details name="faq">
+                <summary>Do I need previous experience?</summary>
+                <p>
+                    Previous experience is helpful, but enthusiasm
+                    and willingness to learn are important too.
+                </p>
+            </details>
+
+            <details name="faq">
+                <summary>What should I include in my application?</summary>
+                <p>
+                    Provide your city, speciality, CV, and motivation.
+                </p>
+            </details>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 TechNova. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
